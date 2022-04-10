@@ -1,0 +1,33 @@
+.login {
+    border: 1px solid lightgray;
+    width: 400px;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+}
+
+.login div p {
+    text-align: left;
+    margin-bottom: 0%;
+    color: gray;
+
+}
+
+.login div {
+    width: 70%;
+    margin: auto;
+}
+
+input {
+    width: 90%;
+    height: 25px;
+
+}
+
+.login div form .submit {
+    background-color: rgba(255, 153, 0, 0.3);
+    border: none;
+}

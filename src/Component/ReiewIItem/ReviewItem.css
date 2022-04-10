@@ -1,0 +1,50 @@
+.review {
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.image {
+
+    width: 121px;
+    border-radius: 10px;
+
+}
+
+.order-detail {
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
+.order-detail h3 {
+
+    width: 300px;
+}
+
+
+
+.img-and-detail {
+    display: flex;
+    align-items: center;
+    width: 400px;
+
+}
+
+.delete {
+    width: 30px;
+    margin-right: 20px;
+    color: gray;
+}
+
+.delete button {
+    cursor: pointer;
+}
+
+.delete button:hover {
+    background-color: orange;
+}

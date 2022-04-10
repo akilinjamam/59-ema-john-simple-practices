@@ -1,0 +1,16 @@
+.order-cart {
+
+    width: 250px;
+    padding: 5px;
+
+}
+
+.order-product {
+    width: 800px;
+    margin: auto;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+}
