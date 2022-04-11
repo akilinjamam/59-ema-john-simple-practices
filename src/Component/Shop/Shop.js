@@ -47,7 +47,7 @@ const Shop = () => {
 
                 <Cart cart={cart} carts={cart.length}>
                     <h2>this is shop</h2>
-                    <Link to="/order"> <button>go to shop</button></Link>
+                    <Link to="/order"> <button className='go-to-order' style={{ padding: '10px', border: 'none', borderRadius: '10px' }}>Go to Order</button></Link>
 
                 </Cart>
             </div>

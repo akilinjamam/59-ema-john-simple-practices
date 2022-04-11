@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
+
 
 const SignUp = () => {
 
@@ -7,6 +11,9 @@ const SignUp = () => {
     const [password, setPassword] = useState('')
     const [confirmpassword, setConfirmpassword] = useState('')
     const [error, setError] = useState('')
+    const navigate = useNavigate()
+
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
 
     const handleEmailOnBlur = (e) => {
         setEmail(e.target.value)
@@ -18,13 +25,27 @@ const SignUp = () => {
         setConfirmpassword(e.target.value)
     }
 
-    const handleOnSubmit = event => {
+    if (user) {
+        navigate('/shop')
+    }
+
+    const handleCreateUser = event => {
         event.preventDefault()
 
         if (password !== confirmpassword) {
             setError('password didn,t matched')
             return
         }
+
+        if (password.length < 6) {
+            setError('password must have to be 6 or more charecter');
+            return
+
+        }
+
+        createUserWithEmailAndPassword(email, password)
+
+
     }
 
 
@@ -33,7 +54,7 @@ const SignUp = () => {
         <div className='login'>
             <h2> Sign Up</h2>
             <div>
-                <form onSubmit={handleOnSubmit}>
+                <form onSubmit={handleCreateUser}>
                     <p>Email :</p>
                     <input onBlur={handleEmailOnBlur} type="email" name="" id="" placeholder='Type your E-mail' required />
                     <br /><br />
