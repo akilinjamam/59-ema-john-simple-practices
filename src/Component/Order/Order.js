@@ -39,7 +39,7 @@ const Order = () => {
 
                 <Cart cart={cart}>
                     <h2>this is order</h2>
-                    <Link to="/shipment"> <button className='go-to-order' style={{ padding: '10px', border: 'none', borderRadius: '10px' }}>Proceed to order</button></Link>
+                    <Link to="/shipment"> <button className='go-to-order' style={{ padding: '10px', border: 'none', borderRadius: '10px' }}>Proceed to shipment</button></Link>
                 </Cart>
             </div>
 
