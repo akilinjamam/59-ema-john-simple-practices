@@ -42,7 +42,7 @@ const Shipment = () => {
 
     return (
         <div className='login'>
-            <h2> Shipment</h2>
+            <h2> Your Shipment</h2>
             <div>
                 <form onSubmit={handleCreateUser}>
                     <p>Name :</p>
